@@ -1,0 +1,16 @@
+documentation:
+  - head-branch: ['^docs', '^documentation']
+  - changed-files:
+    - any-glob-to-any-file: docs/**
+
+feature:
+  - head-branch: ['^feat', '^feature', 'feature']
+
+enhancement:
+  - head-branch: ['^feat', '^feature', 'feature']
+
+bug:
+  - head-branch: ['^fix', 'fix']
+
+ci:
+  - head-branch: ['^ci', 'ci']
