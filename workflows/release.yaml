@@ -26,12 +26,13 @@ jobs:
       GH_REPO: ${{ github.repository }}
 
     steps:
-      - if: github.event_name == 'workflow_dispatch'
-        run: |
-          [ "${{ inputs.prerelease }}" = "true" ] && PRERELEASE=--prerelease
-          gh release create ${{ inputs.release_tag }} $PRERELEASE --generate-notes
+      - if: inputs.prerelease == true
+        run: echo "PRERELEASE=--prerelease" >> $GITHUB_ENV
 
-      - if: github.event_name == 'push'
-        run: |
-          [ "${{ inputs.prerelease }}" = "true" ] && PRERELEASE=--prerelease
-          gh release create ${{ github.ref_name }} $PRERELEASE --generate-notes
+      - name: Release ${{ inputs.release_tag }}
+        if: github.event_name == 'workflow_dispatch'
+        run: gh release create ${{ inputs.release_tag }} $PRERELEASE --generate-notes
+
+      - name: Release ${{ github.ref_name }}
+        if: github.event_name == 'push'
+        run: gh release create ${{ github.ref_name }} $PRERELEASE --generate-notes
