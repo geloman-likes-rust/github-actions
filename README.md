@@ -7,7 +7,7 @@
 
 ## Usage
 
-#### Clone this at the root of your project
+#### Step 1: Clone this at the root of your project
 
 clone via https
 ```sh
@@ -17,4 +17,9 @@ git clone --depth 1 https://github.com/geloman-likes-rust/github-actions ./.gith
 clone via ssh
 ```sh
 git clone --depth 1 git@github.com:geloman-likes-rust/github-actions ./.github
+```
+
+#### Step 2: Remove the gitdir and README
+```sh
+rm -rf ./.github/.git ./.github/README.md
 ```
