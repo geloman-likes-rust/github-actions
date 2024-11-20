@@ -1,7 +1,19 @@
+editorconfig:
+  - changed-files:
+    - any-glob-to-any-file: '.editorconfig'
+
+prettierrc:
+  - changed-files:
+    - any-glob-to-any-file: ['.prettierrc', '.prettierrc.json', '.prettierrc.yaml', '.prettierrc.yml', '.prettierrc.js', '.prettierrc.cjs', 'prettier.config.js', 'prettier.config.cjs', '.prettierignore']
+
+stylua:
+  - changed-files:
+    - any-glob-to-any-file: ['stylua.toml', '.stylua.toml', '.styluaignore']
+
 documentation:
   - head-branch: ['^docs', '^documentation']
   - changed-files:
-    - any-glob-to-any-file: docs/**
+    - any-glob-to-any-file: ['docs/**', '**/*.md']
 
 feature:
   - head-branch: ['^feat', '^feature', 'feature']
@@ -14,3 +26,4 @@ bug:
 
 ci:
   - head-branch: ['^ci', 'ci']
+  - any-glob-to-any-file: ['.github/actions/**', '.github/workflows/**', '.github/scripts/**']
