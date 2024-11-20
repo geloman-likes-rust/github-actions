@@ -1,8 +1,11 @@
 changelog:
   exclude:
     labels:
-      - documentation
       - ci
+      - stylua
+      - editorconfig
+      - prettierrc
+      - documentation
 
   categories:
 
@@ -12,6 +15,7 @@ changelog:
 
     - title: ✨ New Features 🚀
       labels:
+        - feature
         - enhancement
 
     - title: 🐞 Bug Fixes 🔧
