@@ -16,7 +16,7 @@ git clone --depth 1 https://github.com/geloman-likes-rust/github-actions ./.gith
 
 clone via ssh
 ```sh
-git clone --depth 1 git@github.com:geloman-likes-rust/github-actions ./.github
+git clone --depth 1 git@github.com:geloman-likes-rust/github-actions.git ./.github
 ```
 
 #### Step 2: Remove the gitdir and README
