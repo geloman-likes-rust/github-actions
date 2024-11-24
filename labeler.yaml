@@ -27,3 +27,9 @@ bug:
 ci:
   - head-branch: ['^ci', 'ci']
   - any-glob-to-any-file: ['.github/actions/**', '.github/workflows/**', '.github/scripts/**']
+
+rollback:
+  - head-branch: ['^rollback', 'rollback', '^revert', 'revert']
+
+revert:
+  - head-branch: ['^revert', 'revert', '^rollback', 'rollback']
