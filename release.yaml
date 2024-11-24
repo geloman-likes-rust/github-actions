@@ -2,6 +2,8 @@ changelog:
   exclude:
     labels:
       - ci
+      - revert
+      - rollback
       - stylua
       - editorconfig
       - prettierrc
